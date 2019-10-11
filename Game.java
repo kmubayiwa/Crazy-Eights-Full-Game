@@ -129,7 +129,12 @@ public class Game {
 			}
 			else if (ability.equals("reverse")){ //"reverse multiplies the game flow by -1
 				System.out.println("***JACK REVERSED GAME FLOW***");
-				this.flow *= -1;
+				if(this.players.length > 2) {
+					this.flow *= -1;
+				}
+				else{
+					this.flow = 2;
+				}
 
 			}
 			else if(ability.equals("change suit")){
